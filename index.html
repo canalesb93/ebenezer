@@ -8,51 +8,70 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWBP6tOOoKXn-L57rnP5ERMRzDI1QkOk8&callback=initMap"
+          async defer></script>
   </head>
   <body>
     <section class="page-header">
       <h1 class="project-name">Ebenezer</h1>
       <h2 class="project-tagline">Division Plasticos</h2>
-      <a href="https://github.com/canalesb93/ebenezer" class="btn">View on GitHub</a>
-      <a href="https://github.com/canalesb93/ebenezer/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/canalesb93/ebenezer/tarball/master" class="btn">Download .tar.gz</a>
+      <a href="#contacto" class="btn">Contactanos!</a>
+      <!-- <a href="https://github.com/canalesb93/ebenezer/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/canalesb93/ebenezer/tarball/master" class="btn">Download .tar.gz</a> -->
     </section>
 
     <section class="main-content">
-      <h3>
-<a id="misión" class="anchor" href="#misi%C3%B3n" aria-hidden="true"><span class="octicon octicon-link"></span></a>Misión</h3>
+      <h3><a id="misión" class="anchor" href="#misi%C3%B3n" aria-hidden="true"><span class="octicon octicon-link"></span></a>Misión</h3>
 
-<p>Consolidarnos como una empresa líder en nuestro ramo, ofreciendo el mejor servicio, precio y calidad en los productos que manufacturamos. Así como también el buscar continuamente la superación en nuestra estructura administrativa y comercial para ofrecer en el corto plazo la mejor atención a nuestros clientes y colaboradores.</p>
+      <p>Consolidarnos como una empresa líder en nuestro ramo, ofreciendo el mejor servicio, precio y calidad en los productos que manufacturamos. Así como también el buscar continuamente la superación en nuestra estructura administrativa y comercial para ofrecer en el corto plazo la mejor atención a nuestros clientes y colaboradores.</p>
 
-<h3>
-<a id="visión" class="anchor" href="#visi%C3%B3n" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visión</h3>
+      <h3><a id="visión" class="anchor" href="#visi%C3%B3n" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visión</h3>
 
-<p>Siendo la satisfacción de nuestros clientes nuestro principal compromiso, nuestra misión es convertirnos en una solución integral, ofreciendo productos de buena calidad, así como también, la búsqueda de buenas relaciones, mejora e innovación constante en el mercado bolsas.</p>
+      <p>Siendo la satisfacción de nuestros clientes nuestro principal compromiso, nuestra misión es convertirnos en una solución integral, ofreciendo productos de buena calidad, así como también, la búsqueda de buenas relaciones, mejora e innovación constante en el mercado bolsas.</p>
 
-<h3>
-<a id="producto" class="anchor" href="#producto" aria-hidden="true"><span class="octicon octicon-link"></span></a>Producto</h3>
+      <h3><a id="producto" class="anchor" href="#producto" aria-hidden="true"><span class="octicon octicon-link"></span></a>Producto</h3>
 
-<p>En Ebenezer Division Plasticos vendemos...</p>
+      <p>En Ebenezer Division Plasticos vendemos...</p>
 
-<h3>
-<a id="contacto" class="anchor" href="#contacto" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contacto</h3>
+      <h3><a id="contacto" class="anchor" href="#contacto" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contacto</h3>
 
-<p>Puedes contactarnos a traves de...</p>
+      <p>Puedes contactarnos a traves de...</p>
 
-<h3>
-<a id="ubicacion" class="anchor" href="#ubicacion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ubicacion</h3>
+      <h3><a id="ubicacion" class="anchor" href="#ubicacion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ubicacion</h3>
 
-<p>Principalmente vendemos nuestros productos en el area de Monterrey. Estamos ubicados especificamente en Nardo 1201 Col. Cementos, Mty, N.L.</p>
+      <p>Principalmente vendemos nuestros productos en el area de Monterrey. Estamos ubicados especificamente en <b>Nardo 1201 Col. Cementos, Mty, N.L.</b></p>
 
-<h3>
-<a id="mapa" class="anchor" href="#mapa" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mapa</h3>
+      <h3><a id="mapa" class="anchor" href="#mapa" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mapa</h3>
+    </section>
+    <div id="map"></div>
+    <script>
+      var map;
+      var myLatLng = {lat: 25.701599, lng: -100.295618};
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/canalesb93/ebenezer">Ebenezer</a> is maintained by <a href="https://github.com/canalesb93">canalesb93</a>.</span>
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          zoom: 16,
+          disableDefaultUI: true,
+          scrollwheel: false
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Ebenezer Division Plasticos'
+        });
+      }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWBP6tOOoKXn-L57rnP5ERMRzDI1QkOk8&callback=initMap"
+        async defer></script>
+
+    <section class="main-content">
+      <footer class="site-footer" align="center">
+        <span class="site-footer-credits">Ebenezer Division Plasticos es una compañia hija de <a href="www.ebenezerpapelera.com.mx">Ebenezer Papeleria</a></span>
       </footer>
-
     </section>
 
   
